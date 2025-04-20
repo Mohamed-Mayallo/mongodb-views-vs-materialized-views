@@ -1,0 +1,20 @@
+{
+  "name": "mongodb-standard-vs-materialized-views",
+  "version": "1.0.0",
+  "description": "Demonstration of MongoDB standard views vs materialized views",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "setup-db": "node scripts/1-create-db.js",
+    "seed-data": "node scripts/2-seed-data.js",
+    "create-standard-view": "node scripts/3-create-standard-view.js",
+    "create-materialized-view": "node scripts/4-create-materialized-view.js",
+    "insert-order": "node scripts/5-insert-order.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3"
+  }
+}
