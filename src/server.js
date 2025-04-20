@@ -183,9 +183,6 @@ initializeDatabase().then(async () => {
   // Views must be there (run scripts first)
   await validateViews(db);
 
-  // Watch the orders collection to refresh the materialized view if needed
-  await createMaterializedView();
-
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });

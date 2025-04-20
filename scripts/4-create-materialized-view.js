@@ -174,8 +174,8 @@ async function performIncrementalUpdate(db, documentId) {
       {
         $merge: {
           into: process.env.MATERIALIZED_VIEW_NAME,
-          whenMatched: "replace",
-          whenNotMatched: "insert",
+          whenMatched: "replace", // update
+          whenNotMatched: "insert", // insert
         },
       },
     ];
@@ -212,6 +212,5 @@ if (require.main === module) {
 
 // Export functions for use in the server
 module.exports = {
-  createMaterializedView,
   performIncrementalUpdate,
 };
